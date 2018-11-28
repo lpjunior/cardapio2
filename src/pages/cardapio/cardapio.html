@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cardápio do Dia</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let cardapio of cardapios">
+    <ion-item center text-center>
+      <h2>{{ cardapio.titulo }}</h2>
+      <p>{{ cardapio.subtitulo }}</p>
+    </ion-item>
+
+    <img src="{{ cardapio.imagem }}">
+
+    <ion-card-content center text-center>
+      <p>{{ cardapio.descricao }}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

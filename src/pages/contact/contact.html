@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contato
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Entre em Contato Conosco</ion-list-header>
+    <ion-item>
+      <ion-label color="dark" stacked>Nome</ion-label>
+      <ion-input [(ngModel)]="nome" type="text" placeholder="Informe o nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" stacked>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email" placeholder="Informe o Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" stacked>Telefone</ion-label>
+      <ion-input [(ngModel)]="telefone" type="tel" placeholder="Informe o telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]="msg" rows="5" placeholder="Entre com a mensagem"></ion-textarea>
+    </ion-item>
+    <div padding>
+      <button ion-button icon-end (click) = "showContactFull()">
+        Enviar
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </div>
+  </ion-list>
+
+  <div padding>
+    <p>Nome: {{txtNome}}</p>
+    <p>Email: {{txtEmail}}</p>
+    <p>Telefone: {{txtTelefone}}</p>
+    <ion-textarea [(ngModel)]="txtMsg" rows="5" placeholder="Aqui vai aparecer a msg"></ion-textarea>
+  </div>
+</ion-content>
